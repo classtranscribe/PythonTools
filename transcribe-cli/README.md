@@ -3,7 +3,7 @@
 In this directory are tools to perform transcription tasks from the command line (shell).
 
 * `ms_recognize_pcm` a utility to perform speech recognition on an audio file using the Microsoft Azure-based Cognitive Services Speech-to-Text. This utility stores the results in a json file for future processing. 
-* `ms_json_to_caption` a utility that can process the json file and create standard captioning files. Three formats are supported - "WebVTT" (`.vtt` extension), "SubRip" (`.srt` extensioj) caption files and plain text format (`.txt` extension).
+* `ms_json_to_caption` a utility that can process the json file and create standard captioning files. Three formats are supported - "WebVTT" (`.vtt` extension), "SubRip" (`.srt` extension) caption files and plain text format (`.txt` extension).
 
 # License
 
