@@ -72,7 +72,7 @@ One or more output files can be specified. The output format is automatically fo
 For example, to generate all three output files just specify three output files -
 
 ```sh
-python3 `ms_json_to_caption.py` recognizedspeech.json transcription.txt captions.vtt captions.srt
+python3 ms_json_to_caption.py recognizedspeech.json transcription.txt captions.vtt captions.srt
 ```
  
 # Transcoding audio from video files
@@ -85,7 +85,7 @@ ffmpeg -y  -i video-source.mp4  -acodec pcm_s16le -f s16le -ac 1 -ar 16000 audio
 
 # Embedding captions into mp4 video files
 
-The ffmpeg utility can also be used to embed srt formatted closed captions into mp4 video files. An example is shown below that will work with a typical mp4 video file with a standard mpeg container. Most mp4 mpeg containers can support captions and even multiple captions for different multiple languages. However this is beyond the scope of this document.
+The ffmpeg utility can be used to embed srt formatted closed captions into mp4 video files. An example is shown below that will work with a typical mp4 video file with a standard mpeg container. Most mp4 mpeg containers can support captions and even multiple captions for different multiple languages. However this is beyond the scope of this document.
 
 ```sh
 ffmpeg -i video-source.mp4' -i mycaptions.srt' -c:v copy -c:a copy -c:s mov_text  video-with-captions.mp4
