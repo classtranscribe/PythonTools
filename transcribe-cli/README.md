@@ -27,7 +27,7 @@ Some novice programming and shell / terminal skills are required. Summary -
 
 * `Python 3` is required, together with the azure-cognitiveservices-speech SDK
 * A Cognitive Services Azure API Key is required to use Speech-To-Text service
-* `ffmpeg` is a useful utility to  extract the 16Khz PCM audio suitable for automated speech recognition from a typical (e.g. 'mp4') video file 
+* `ffmpeg` is a useful utility to extract the 16Khz PCM audio suitable for automated speech recognition from a typical (e.g. 'mp4') video file 
 
 Speech recognition is performed by sending audio to the Microsoft Cognitive Speech-to-text service.
 To use the Microsoft Azure a Cognitive Services Azure API-Key and Azure account is required. The cost of transcription is approximately $1 per audio hour transcribed.
@@ -75,16 +75,16 @@ python3 ms_json_to_caption.py recognizedspeech.json transcription.txt captions.v
  
 # Transcoding audio from video files
 
-The audio file must be 16KHz mono (single channel) PCM format. One method to extract or transcode the audio into the correct format is to use `ffmpeg`. An example shell command is shown below.  The `ffmpeg` command can also transcode audio from other formats (e.g. mp3) into the correct format for speech recognition. Please see the official ffmpeg documentation for further details.
+The audio file must be 16KHz mono (single channel) PCM format. One method to extract or transcode the audio into the correct format is to use `ffmpeg`. An example shell command is shown below. The `ffmpeg` command can also transcode audio from other formats (e.g. mp3) into the correct format for speech recognition. Please see the official ffmpeg documentation for further details.
 
 ```sh
-ffmpeg -y  -i video-source.mp4  -acodec pcm_s16le -f s16le -ac 1 -ar 16000 audio-output.wav
+ffmpeg -y -i video-source.mp4 -acodec pcm_s16le -f s16le -ac 1 -ar 16000 audio-output.wav
 ```
 
 # Embedding captions into mp4 video files
 
-The ffmpeg utility can be used to embed srt formatted closed captions into mp4 video files. An example is shown below that will work with a typical mp4 video file with a standard mpeg container. This example takes video-source.mp4 as input mycaptions.srt and creates a new output video file 'video-with-captions.mp4' with the captions embedded inside the video file.  Most mp4 mpeg containers can support captions and even multiple captions for different multiple languages. Please see the official ffmpeg documentation for further information.
+The ffmpeg utility can be used to embed srt formatted closed captions into mp4 video files. An example is shown below that will work with a typical mp4 video file with a standard mpeg container. This example takes video-source.mp4 as input mycaptions.srt and creates a new output video file 'video-with-captions.mp4' with the captions embedded inside the video file. Most mp4 mpeg containers can support captions and even multiple captions for different multiple languages. Please see the official ffmpeg documentation for further information.
 
 ```sh
-ffmpeg -i video-source.mp4 -i mycaptions.srt -c:v copy -c:a copy -c:s mov_text  video-with-captions.mp4
+ffmpeg -i video-source.mp4 -i mycaptions.srt -c:v copy -c:a copy -c:s mov_text video-with-captions.mp4
 ```
