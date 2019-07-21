@@ -5,11 +5,17 @@ In this directory are tools to perform transcription tasks from the command line
 * `ms_recognize_pcm` a utility to perform speech recognition on an audio file using the Microsoft Azure-based Cognitive Services Speech-to-Text. This utility stores the results in a json file for future processing. 
 * `ms_json_to_caption` a utility that can process the json file and create standard captioning files. Three formats are supported - "WebVTT" (`.vtt` extension), "SubRip" (`.srt` extension) caption files and plain text format (`.txt` extension).
 
-# License
+# License & Acknowledgement
 
-This project is "Acknowledgement-ware!" i.e. You are free to use it subject to the license included in this repository and source files but we request you publicly acknowledge us. An example acknowlegdgement is below.
+This project is "Acknowledgement-ware!" i.e. You are free to use the resources here subject to the open source licenses included in this repository and embedded in source files but we also request you publicly acknowledge us. An example acknowlegdgement is below.
 
-"We acknowledge ClassTranscribe, a Digital Accessibility Project at the University of Illinois"
+"In ..<your-activity>.. we would like to acknowledge the use of ClassTranscribe (https://github.com/classtranscribe), a Digital Accessibility Project at the University of Illinois"
+
+Academic papers and reports may also wish to cite ClassTranscribe related publications -
+
+Chirantan, Angrave et al, '"What did I just miss?!" Presenting ClassTranscribe, an Automated Live- captioning and Text-searchable Lecture Video System, and Related Pedagog- ical Best Practices' © 2019 American Society for Engineering Education. ASEE Annual Conference Proceedings, 2019, Tampa Florida.
+
+Ren, Jia Chen / Hasegawa-Johnson, Mark / Angrave, Lawrence (2015): "Classtranscribe: a new tool with new educational opportunities for student crowdsourced college lecture transcription", In SLaTE-2015, 179-180.
 
 # An important note on captioning
 
