@@ -3,7 +3,7 @@
 In this directory are tools to perform transcription tasks from the command line (shell).
 
 * `ms_recognize_pcm` a utility to perform speech recognition on an audio file using the Microsoft Azure-based Cognitive Services Speech-to-Text. This utility stores the results in a json file for future processing. 
-* `ms_json_to_caption` a utility that can process the json file and create standard captioning files. Three formats are supported - "WebVTT" ('.vtt' extension), "SubRip" ('.srt' extensioj) caption files and plain text format ('.txt' extension).
+* `ms_json_to_caption` a utility that can process the json file and create standard captioning files. Three formats are supported - "WebVTT" (`.vtt` extension), "SubRip" (`.srt` extensioj) caption files and plain text format (`.txt` extension).
 
 # License
 
@@ -71,7 +71,7 @@ python3 `ms_json_to_caption.py` recognizedspeech.json transcription.txt captions
  
 # Transcoding audio from video files
 
-The audio file must be 16KHz mono (single channel) PCM format. One method to extract or transcode the audio into the correct format is to use `ffmpeg`. An example is shown below.
+The audio file must be 16KHz mono (single channel) PCM format. One method to extract or transcode the audio into the correct format is to use `ffmpeg`. An example shell command is shown below.
 
 ```sh
 ffmpeg -y  -i video-source.mp4  -acodec pcm_s16le -f s16le -ac 1 -ar 16000 audio-output.wav
