@@ -1,14 +1,13 @@
-# PythonTools
+# transcribe-cli
 
-This repository project holds smaller and related companion projects that are outside the main ClassTranscribe initiative.
+In this directory are tools to perform transcription tasks from the command line (shell).
 
-Of particular note -
 * `ms_recognize_pcm` a utility to perform speech recognition on an audio file using the Microsoft Azure-based Cognitive Services Speech-to-Text. This utility stores the results in a json file for future processing. 
 * `ms_json_to_caption` a utility that can process the json file and create standard captioning files. Three formats are supported - "WebVTT" ('.vtt' extension), "SubRip" ('.srt' extensioj) caption files and plain text format ('.txt' extension).
 
 # License
 
-This project is "Acknowledgement-ware!" i.e. You are free to use it subject to the license included in this repository but we request you publicly acknowledge us. An example acknowlegdgement is below.
+This project is "Acknowledgement-ware!" i.e. You are free to use it subject to the license included in this repository and source files but we request you publicly acknowledge us. An example acknowlegdgement is below.
 
 "We acknowledge ClassTranscribe, a Digital Accessibility Project at the University of Illinois"
 
@@ -31,18 +30,23 @@ To use the Microsoft Azure a Cognitive Services Azure API-Key and Azure account 
 
 To connect to the Transcription service, you will need to install the python azure-cognitiveservices-speech SDK. A typical command to install the SDK is to use pip or pip3 -
 
-```pip3 install azure-cognitiveservices-speech```
+```sh
+pip3 install azure-cognitiveservices-speech
+```
 
 A web search of 'Microsoft python install azure-cognitiveservices-speech SDK' will find more detailed official instructions.
 
 The `ms_recognize_pcm program` expects to find the api key and azure region as environment variables. On Mac OSX, Linux, and Microsoft Windows Subsystem for Linux, you can store these in a simple script (don't put spaces around the equals sign)-
+
 ```sh
 > cat setenv.sh
 export speech_key=12345your-key
-export azure_region=westus```
+export azure_region=westus
+```
 
 Then use `source setenv.sh` to set the environment variables before running `ms_recognize_pcm` 
 For example, to recognize speech in the audio file myaudio.wav and to store the result in recognizedspeech.json
+
 ```sh
 > source setenv.sh
 > python3 ms_recognize_pcm.py myaudio.wav recognizedspeech.json
@@ -56,6 +60,7 @@ Three output formats are supported - `WebVTT` (`.vtt` extension), `SubRip` (`.sr
 ```sh
 python3 `ms_json_to_caption.py` path-to-json-file output-file[s]
 ```
+
 One or more output files can be specified. The output format is automatically for each file is inferred by the file extension (one of .vtt .srt or .txt).
 
 For example, to generate all three output files just specify three output files -
@@ -79,6 +84,3 @@ The ffmpeg utility can also be used to embed srt formatted closed captions into 
 ```sh
 ffmpeg -i video-source.mp4' -i mycaptions.srt' -c:v copy -c:a copy -c:s mov_text  video-with-captions.mp4
 ```
-
-
-
