@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # ms_json_to_caption
 # Copyright (c) 2019 Lawrence Angrave
 
@@ -268,9 +269,8 @@ class PlainTextWriter:
 
 def main():
     if len(sys.argv) <3 :
-        print ("Usage: {} input_json_file [output.txt]+ [output.vtt]+ [output.srt]+".format(sys.argv[0]) )
-        print('Output format will be plain transcription text, srt captions, or webvtt captions depending on file extension (.txt .srt or .vtt)')
-        print('More than one output file can be specified')
+        print ("Usage: {} input_json_file output[.txt | .srt | .vtt] [more_output_files]".format(sys.argv[0]) )
+        print('Output will be plain transcription text, srt captions, or webvtt captions format depending on file extension (.txt .srt or .vtt)')
         sys.exit(1)
         
     json_file = sys.argv[1]
