@@ -1,6 +1,6 @@
 # PythonTools
 
-Please see the readme in each subdirectory for furter information.
+Please see the readme in each subdirectory for further information.
 
 These tools are provided with support as part of the ClassTranscribe project.
 
