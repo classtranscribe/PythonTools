@@ -7,7 +7,7 @@ In this directory are tools to perform transcription tasks from the command line
 
 # License & Acknowledgement
 
-This project is "Acknowledgement-ware!" i.e. You are free to use the resources here subject to the open source licenses included in this repository and embedded in source files but we also request you publicly acknowledge us. An example acknowlegdgement is below.
+This project is licensed under the NCSA opensource license (see the separate LICENSE file) and also considered "Acknowledgement-ware!" i.e. You are free to use the resources here subject to the open source licenses included in this repository and embedded in source files but we also request you publicly acknowledge us. An example acknowlegdgement is below.
 
 "In ..<your-activity>.. we would like to acknowledge the use of ClassTranscribe (https://github.com/classtranscribe), a Digital Accessibility Project at the University of Illinois"
 
