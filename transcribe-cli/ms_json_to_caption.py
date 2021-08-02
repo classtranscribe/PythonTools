@@ -298,7 +298,7 @@ def main():
     
         captions = captioner.process_ms_json(json_results)
     
-        with open(caption_file, 'w') as out_file:
+        with open(caption_file, 'w', encoding='utf-8') as out_file:
             out_file.write(captions)
     sys.exit(0)
    
